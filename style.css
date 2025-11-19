@@ -26,7 +26,7 @@
 }
 
 html {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y none;
     scroll-behavior: smooth;
     height: 100%;
 }
@@ -353,13 +353,6 @@ address {
     animation: gradient 2s linear infinite;
 }
 
-@keyframes gradient {
-
-    to {}
-
-    from {}
-}
-
 .banner-pagination {
     display: flex;
     justify-content: center;
@@ -483,10 +476,6 @@ address {
     background-color: var(--color-dark-alternate);
 }
 
-.border-radius-wrap {
-    overflow: hidden;
-}
-
 .join-us-wrapper {
     width: 100%;
     display: flex;
@@ -497,15 +486,21 @@ address {
     padding-inline: clamp(50px, 20vw, 480px);
 }
 
+.border-radius-wrap {
+    overflow: hidden;
+    border-radius: 5%;
+}
+
 .join-us-wrapper-video {
+    /* ВАЖНО! */
+    display: block;
+
     position: relative;
     inset: 0;
     margin: auto;
     max-width: clamp(290px, 50vw, 960px);
+    width: 100%;
     height: auto;
-    /* clip-path:
-        path("M60,600 L 0,540 L 0,60 A 10,10 0,0,0 60,0 L 900,0 L 960,60 L 960,400 A 10,10 0,0,0 940,420 L 800,420 L 780,440 L 780,550 L 740,600 Z");
-    object-fit: cover; */
 }
 
 .join-us-wrapper-play-button {
@@ -1540,10 +1535,6 @@ svg *[stroke] {
         border: 1px solid var(--color-light-gray);
         transform: scale(1.05);
     }
-
-    /* .footer-form-input-button:hover::after {
-        transform: scale(1.05);
-    } */
 
     .footer:not(.footer-extra) a:hover {
         transform: scale(1.1);
