@@ -23,10 +23,11 @@
     --header-height: 90px;
 
     --transition-duration: 0.18s;
+
+    --vh: 1vh;
 }
 
 html {
-    scroll-snap-type: y none;
     scroll-behavior: smooth;
     height: 100%;
 }
@@ -1253,16 +1254,17 @@ svg *[stroke] {
     .join-us,
     .location,
     .family {
+        height: calc(var(--vh, 1vh) * 100);
+        min-height: calc(var(--vh, 1vh) * 100);
+        transition: height 0.3s ease;
         position: relative;
-        min-height: 100vh;
-        min-height: 100dvh;
-        scroll-snap-align: start;
+        /* min-height: 100vh;
+        min-height: 100dvh; */
     }
 
     .calculate,
     .footer {
         position: relative;
-        scroll-snap-align: start;
     }
 
     .motivation-title:not(:last-child) {
