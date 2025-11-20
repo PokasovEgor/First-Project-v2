@@ -29,6 +29,7 @@ html {
     scroll-snap-type: y none;
     scroll-behavior: smooth;
     height: 100%;
+    transition: height 1s linear;
 }
 
 body {
@@ -40,6 +41,7 @@ body {
 
     overflow-y: scroll;
     height: 100%;
+    transition: height 1s linear;
 }
 
 /* Утилитарные классы */
@@ -1256,14 +1258,14 @@ svg *[stroke] {
         position: relative;
         min-height: 100dvh;
         scroll-snap-align: start;
-        transition: height 0.3s linear;
+        transition: height 1s linear;
     }
 
     .calculate,
     .footer {
         position: relative;
         scroll-snap-align: start;
-        transition: height 0.3s linear;
+        transition: height 1s linear;
     }
 
     .motivation-title:not(:last-child) {
@@ -1549,3 +1551,4 @@ svg *[stroke] {
         transform: scale(1.1);
     }
 }
+
