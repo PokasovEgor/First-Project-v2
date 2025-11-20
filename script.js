@@ -82,32 +82,32 @@ document.addEventListener('DOMContentLoaded', function() {
     updatePlayButton();
 });
 
-class SmoothViewportCSS {
-    constructor() {
-        this.resizeTimeout = null;
-        this.init();
-    }
+// class SmoothViewportCSS {
+//     constructor() {
+//         this.resizeTimeout = null;
+//         this.init();
+//     }
     
-    init() {
-        this.updateViewportHeight();
+//     init() {
+//         this.updateViewportHeight();
         
-        window.addEventListener('resize', () => {
-            // Дебаунс ресайза
-            clearTimeout(this.resizeTimeout);
-            this.resizeTimeout = setTimeout(() => {
-                this.updateViewportHeight();
-            }, 100);
-        });
+//         window.addEventListener('resize', () => {
+//             // Дебаунс ресайза
+//             clearTimeout(this.resizeTimeout);
+//             this.resizeTimeout = setTimeout(() => {
+//                 this.updateViewportHeight();
+//             }, 100);
+//         });
         
-        window.addEventListener('orientationchange', () => {
-            setTimeout(() => {
-                this.updateViewportHeight();
-            }, 500);
-        });
-    }
+//         window.addEventListener('orientationchange', () => {
+//             setTimeout(() => {
+//                 this.updateViewportHeight();
+//             }, 500);
+//         });
+//     }
     
-    updateViewportHeight() {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-}
+//     updateViewportHeight() {
+//         const vh = window.innerHeight * 0.01;
+//         document.documentElement.style.setProperty('--vh', `${vh}px`);
+//     }
+// }
