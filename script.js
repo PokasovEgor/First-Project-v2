@@ -82,21 +82,32 @@ document.addEventListener('DOMContentLoaded', function() {
     updatePlayButton();
 });
 
-// Функция для плавного применения 100dvh
-function applySmoothDvh() {
-    const container = document.querySelector('.viewport-height');
+class SmoothViewportCSS {
+    constructor() {
+        this.resizeTimeout = null;
+        this.init();
+    }
     
-    // Устанавливаем начальную высоту
-    container.style.height = '100vh';
+    init() {
+        this.updateViewportHeight();
+        
+        window.addEventListener('resize', () => {
+            // Дебаунс ресайза
+            clearTimeout(this.resizeTimeout);
+            this.resizeTimeout = setTimeout(() => {
+                this.updateViewportHeight();
+            }, 100);
+        });
+        
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                this.updateViewportHeight();
+            }, 500);
+        });
+    }
     
-    // Плавно изменяем на 100dvh
-    setTimeout(() => {
-        container.style.height = '100dvh';
-    }, 100);
+    updateViewportHeight() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
 }
-
-// Применяем при загрузке страницы
-document.addEventListener('DOMContentLoaded', applySmoothDvh);
-
-// Также применяем при изменении размера окна
-window.addEventListener('resize', applySmoothDvh);
