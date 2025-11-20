@@ -1258,8 +1258,6 @@ svg *[stroke] {
         min-height: calc(var(--vh, 1vh) * 100);
         transition: height 0.3s ease;
         position: relative;
-        min-height: 100vh;
-        min-height: 100dvh;
     }
 
     .calculate,
@@ -1550,3 +1548,4 @@ svg *[stroke] {
         transform: scale(1.1);
     }
 }
+
