@@ -81,3 +81,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Инициализация состояния кнопки
     updatePlayButton();
 });
+
+// Функция для плавного применения 100dvh
+function applySmoothDvh() {
+    const container = document.querySelector('.viewport-height');
+    
+    // Устанавливаем начальную высоту
+    container.style.height = '100vh';
+    
+    // Плавно изменяем на 100dvh
+    setTimeout(() => {
+        container.style.height = '100dvh';
+    }, 100);
+}
+
+// Применяем при загрузке страницы
+document.addEventListener('DOMContentLoaded', applySmoothDvh);
+
+// Также применяем при изменении размера окна
+window.addEventListener('resize', applySmoothDvh);
