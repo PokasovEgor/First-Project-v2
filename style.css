@@ -545,7 +545,7 @@ address {
 .body-title::after {
     display: inline-block;
     content: "";
-    width: clamp(42px, 6.14vw, 127px);
+    width: clamp(35px, 6.14vw, 127px);
     aspect-ratio: 1;
     background: url("./icons/Join-us/join-us-title-icon.svg") center/contain no-repeat;
     margin-left: 0.14em;
@@ -1256,13 +1256,14 @@ svg *[stroke] {
         position: relative;
         min-height: 100dvh;
         scroll-snap-align: start;
-        transition: height 0.2s linear;
+        transition: height 0.3s linear;
     }
 
     .calculate,
     .footer {
         position: relative;
         scroll-snap-align: start;
+        transition: height 0.3s linear;
     }
 
     .motivation-title:not(:last-child) {
@@ -1374,6 +1375,10 @@ svg *[stroke] {
         width: 200px;
         height: auto;
         flex-shrink: 0;
+    }
+
+    .column-title {
+        font-size: 19px;
     }
 
     .column-description {
@@ -1535,6 +1540,10 @@ svg *[stroke] {
         border: 1px solid var(--color-light-gray);
         transform: scale(1.05);
     }
+
+    /* .footer-form-input-button:hover::after {
+        transform: scale(1.05);
+    } */
 
     .footer:not(.footer-extra) a:hover {
         transform: scale(1.1);
