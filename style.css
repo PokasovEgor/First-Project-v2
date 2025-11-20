@@ -1248,7 +1248,8 @@ svg *[stroke] {
 }
 
 @media (max-width: 480px) {
-
+    
+    .banner
     .motivation-card,
     .training-types,
     .join-us,
@@ -1550,3 +1551,4 @@ svg *[stroke] {
         transform: scale(1.1);
     }
 }
+
