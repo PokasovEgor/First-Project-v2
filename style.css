@@ -29,7 +29,7 @@ html {
     scroll-snap-type: y none;
     scroll-behavior: smooth;
     height: 100%;
-    transition: height 1s linear;
+    transition: height 0.5s linear;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
 
     overflow-y: scroll;
     height: 100%;
-    transition: height 1s linear;
+    transition: height 0.5s linear;
 }
 
 /* Утилитарные классы */
@@ -172,7 +172,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .backdrop-title::before {
     content: "";
     position: absolute;
-    top: -0.1em;
+    top: -0.02em;
     right: calc(100% + 0.3em);
     width: 0.65em;
     height: 1em;
@@ -547,7 +547,7 @@ address {
 .body-title::after {
     display: inline-block;
     content: "";
-    width: clamp(35px, 6.14vw, 127px);
+    width: clamp(0.71em, 6.1vw, 127px);
     aspect-ratio: 1;
     background: url("./icons/Join-us/join-us-title-icon.svg") center/contain no-repeat;
     margin-left: 0.14em;
@@ -1256,16 +1256,17 @@ svg *[stroke] {
     .location,
     .family {
         position: relative;
+        min-height: 100vh;
         min-height: 100dvh;
         scroll-snap-align: start;
-        transition: height 1s linear;
+        transition: height 0.5s linear;
     }
 
     .calculate,
     .footer {
         position: relative;
         scroll-snap-align: start;
-        transition: height 1s linear;
+        transition: height 0.5s linear;
     }
 
     .motivation-title:not(:last-child) {
@@ -1543,12 +1544,7 @@ svg *[stroke] {
         transform: scale(1.05);
     }
 
-    /* .footer-form-input-button:hover::after {
-        transform: scale(1.05);
-    } */
-
     .footer:not(.footer-extra) a:hover {
         transform: scale(1.1);
     }
 }
-
