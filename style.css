@@ -23,8 +23,8 @@
     --header-height: 90px;
 
     --transition-duration: 0.18s;
-
-    --vh: 1vh;
+/* 
+    --vh: 1vh; */
 }
 
 html {
@@ -1254,10 +1254,12 @@ svg *[stroke] {
     .join-us,
     .location,
     .family {
-        height: calc(var(--vh, 1vh) * 100);
+        /* height: calc(var(--vh, 1vh) * 100);
         min-height: calc(var(--vh, 1vh) * 100);
-        transition: height 0.3s ease;
+        transition: height 0.3s ease; */
         position: relative;
+        min-height: 100vh;
+        min-height: 100dvh;
     }
 
     .calculate,
@@ -1548,4 +1550,3 @@ svg *[stroke] {
         transform: scale(1.1);
     }
 }
-
