@@ -316,7 +316,7 @@ address {
 /* Первый блок */
 
 .banner {
-    min-height: calc(calc(var(--vh, 1vh) * 100) - var(--header-height));
+    min-height: calc(100vh - var(--header-height));
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -952,7 +952,7 @@ svg *[stroke] {
 
     .banner {
         padding-inline: 30px;
-        min-height: calc(calc(var(--vh, 1vh) * 100) - var(--header-height) - 35px);
+        min-height: calc(100dvh - var(--header-height) - 35px);
     }
 
     .motivation-image {
@@ -1026,7 +1026,7 @@ svg *[stroke] {
 
     .banner {
         padding-inline: 15px;
-        min-height: calc(calc(var(--vh, 1vh) * 100) - var(--header-height) - 10px);
+        min-height: calc(100dvh - var(--header-height) - 10px);
     }
 
     .motivation-card,
@@ -1165,7 +1165,7 @@ svg *[stroke] {
 
     .banner {
         padding-inline: 10px;
-        min-height: calc(calc(var(--vh, 1vh) * 100) - var(--header-height) - 5px);
+        min-height: calc(100dvh - var(--header-height) - 5px);
     }
 
     .motivation-title {
@@ -1248,8 +1248,7 @@ svg *[stroke] {
 }
 
 @media (max-width: 480px) {
-    
-    .banner
+
     .motivation-card,
     .training-types,
     .join-us,
@@ -1259,8 +1258,8 @@ svg *[stroke] {
         min-height: calc(var(--vh, 1vh) * 100);
         transition: height 0.3s ease;
         position: relative;
-        /* min-height: 100vh;
-        min-height: 100dvh; */
+        min-height: 100vh;
+        min-height: 100dvh;
     }
 
     .calculate,
@@ -1481,7 +1480,7 @@ svg *[stroke] {
 
     .banner {
         padding-inline: 10px;
-        min-height: calc(calc(var(--vh, 1vh) * 100) - var(--header-height) - 8px);
+        min-height: calc(100dvh - var(--header-height) - 8px);
     }
 
 }
@@ -1551,6 +1550,3 @@ svg *[stroke] {
         transform: scale(1.1);
     }
 }
-
-
-
